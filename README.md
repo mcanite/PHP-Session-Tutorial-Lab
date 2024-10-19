@@ -23,12 +23,10 @@ session_start();
 ## Setting Session Variables
 One way to set session variables is by setting the variables statically in your code.
 ```
-asdfs
+$_SESSION['username'] = coolUsername473;
 ```
 ### What’s Happening?
 While running this code snippet, we can see the session variables using web inspect tools. 
-
-[screenshot of session variables on inspect]
 
 Alternatively, we can utilize text boxes to allow users to input their own answers to customize the site. As opposed to statically setting the session variables, users will be able to customize the site. In the previous approach, we were able to see the values we wanted, but this value would have been shown for all users, which might not have been applicable for everyone. 
 
