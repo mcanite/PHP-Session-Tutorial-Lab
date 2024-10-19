@@ -26,11 +26,16 @@ One way to set session variables is by setting the variables statically in your 
 $_SESSION['username'] = coolUsername473;
 ```
 ### What’s Happening?
-While running this code snippet, we can see the session variables using web inspect tools. 
+With this code snippet, the session variable for username will has been statically set to be `coolUsername473`. As this user traverses the different pages of a webpage, this user will remain logged in during their session.
 
-Alternatively, we can utilize text boxes to allow users to input their own answers to customize the site. As opposed to statically setting the session variables, users will be able to customize the site. In the previous approach, we were able to see the values we wanted, but this value would have been shown for all users, which might not have been applicable for everyone. 
+Alternatively, we can utilize text boxes to allow users to input their own username to log into the site. As opposed to statically setting the session variables, users would be able to input their personalized username into the site. In the previous approach, we were able to see the values we wanted, but this value would have been shown for all users, which might not have been applicable for everyone. 
 
-[screenshot of page with text boxes, then screenshot of page with session variables being listed]
+## Ending a Session
+Towards the end of PHP code, it's best practice to include a line to destroy the session when the user exits as shown below:
+```
+session_destroy();
+```
+Using  `session_destroy();` will remove stored session data from a website's web server.
 
 # Additional Resources
 * [W3Schools](https://www.w3schools.com/php/php_sessions.asp)
